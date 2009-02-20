@@ -1,0 +1,13 @@
+<span>
+	<%= link_to "Задания", tasks_path %>
+</span> | 
+<span>
+	<%= link_to "Регистрация", new_user_path %>
+</span>
+<% form_for :user, @user, :url => { :action =>  :_login }, :html => { :method => :put } do |form| %>
+<p>Логин</p>
+	<%= form.text_field :login %>
+<p>Пароль</p>
+	<%= form.password_field :password %><br /><br />
+	<%= form.submit "Войти" %>
+<% end %>

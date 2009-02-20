@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>new task</title>
+    </head>
+    <body>
+        <% form_for @task do |form| %>
+        title <br />
+        <%= form.text_field :title %> <br />
+        description <br />
+        <%= form.text_area :description %> <br />
+        date <br />
+        <%= form.date_select :dueidate %> <br />
+        user <br />
+        <%= collection_select :task, :user_id, @users, :id, :login %><br />
+        <%= form.submit %> 
+        <% end %>
+    </body>
+</html>

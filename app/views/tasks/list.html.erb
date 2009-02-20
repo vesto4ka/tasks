@@ -1,0 +1,19 @@
+<% if @current_user %>
+	<span>
+		<%= link_to "Выйти", logout_users_path, :method => :delete %>
+	</span> | 
+	<span>
+		<%= link_to "Добавить", new_task_path %>
+	</span>
+<% else %>
+	<span>
+		<%= link_to "Войти", login_users_path%>
+	</span>	
+<% end %>
+
+<% @tasks.each do |task| %>
+    <div>
+        <div style="padding:5px;"><%=h task.title %> | (<%=h task.dueidate %>) | <%= link_to 'Посмотреть', task_path(task) %></div>
+        <div style="padding-top:-5px;"><%=h task.description %></div>
+    </div>
+<% end %>

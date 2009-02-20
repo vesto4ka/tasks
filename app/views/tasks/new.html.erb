@@ -1,0 +1,11 @@
+<% form_for @task do |form| %>
+<p>Заголовок</p>
+<%= form.text_field :title %>
+<p>Описание</p>
+<%= form.text_area :description, :rows => 5 %>
+<p>Дата</p>
+<%= form.date_select :dueidate %>
+<p>Для пользователя</p>
+<%= collection_select :task, :user_id, @users, :id, :login %><br /><br />
+<%= form.submit "Сохранить" %> 
+<% end %>

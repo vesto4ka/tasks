@@ -1,0 +1,6 @@
+<span>
+	<%= link_to "Задания", tasks_path %>
+</span>
+<h2><%=h @task.title %></h2>
+<p><%=h @task.description %></p>
+<em><%=h @task.user.login %> | <%=h @task.dueidate %></em>

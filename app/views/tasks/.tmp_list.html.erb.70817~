@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Index-start page</title>
+        
+    </head>
+    <body>
+        <% @tasks.each do |task| %>
+            <div>
+                <div class="taskTitle"><%=h task.title %> | (<%=h task.dueidate %>) | <%=h task.created_at %></div>
+                <div class="taskBody"><%=h task.description %></div>
+            </div>
+        <% end %>
+    </body>
+</html>

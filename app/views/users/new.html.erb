@@ -1,0 +1,22 @@
+<span>
+	<%= link_to "Задания", tasks_path %>
+</span>
+<% form_for @user do |form| %>
+	<p>
+		Логин
+	</p>
+	<%= form.text_field :login %>
+	<p>
+		Пароль
+	</p>
+	<%= form.text_field :password %>
+	<p>
+		Возраст
+	</p>
+	<%= form.text_field :age %>
+	<p>
+		Емаил
+	</p>
+	<%= form.text_field :email %><br /><br />
+	<%= form.submit "Зарегистрироваться!" %>
+<% end %>

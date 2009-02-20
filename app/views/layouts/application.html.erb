@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<% if flash[:notice] %>
+			<div style="color:#008080;">
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
+		<% if flash[:error] %>
+			<div style="color:#ff0000;">
+				<%= flash[:error] %>
+			</div>
+		<% end %>
+		
+		<%= yield %>
+		
+	</body>
+</html>
